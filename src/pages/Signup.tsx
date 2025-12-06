@@ -27,15 +27,22 @@ const Signup = () => {
     setLoading(true);
     
     try {
-      await signup({
+      const signupData = {
         email,
         password,
         role,
         fullName,
         mobile,
         ...(role === 'partner' && { instituteName }),
-        ...(role === 'student' && referralCode && { referralCode })
-      });
+        ...(role === 'student' && referralCode && { 
+          referralCode: referralCode.toLowerCase().includes('.learnsphere.com') 
+            ? referralCode.toLowerCase() 
+            : `${referralCode.toLowerCase()}.learnsphere.com`
+        })
+      };
+      
+      console.log('Signup data:', signupData);
+      await signup(signupData);
       
       toast.success('Account created successfully!');
       

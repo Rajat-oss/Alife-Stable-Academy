@@ -21,20 +21,23 @@ const Resell = () => {
       return;
     }
 
-    const code = user.fullName?.toLowerCase().replace(/\s+/g, '') || 
+    const name = user.fullName?.toLowerCase().replace(/\s+/g, '') || 
                  user.email?.split('@')[0].toLowerCase();
-    setReferralCode(code);
+    const fullSubdomain = `${name}.learnsphere.com`;
+    setReferralCode(name);
+    console.log('Partner referral code:', fullSubdomain);
 
     // Listen to real-time student count
     const usersRef = ref(db, 'users');
-    const studentsQuery = query(usersRef, orderByChild('referralCode'), equalTo(code));
+    const studentsQuery = query(usersRef, orderByChild('referralCode'), equalTo(fullSubdomain));
     
     const unsubscribe = onValue(studentsQuery, (snapshot) => {
-      if (snapshot.exists()) {
-        setStudentCount(snapshot.size);
-      } else {
-        setStudentCount(0);
-      }
+      let count = 0;
+      snapshot.forEach(() => {
+        count++;
+      });
+      setStudentCount(count);
+      console.log('Student count:', count);
     });
 
     return () => unsubscribe();
