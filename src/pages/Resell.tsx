@@ -157,8 +157,11 @@ const Resell = () => {
               <p className="text-xl font-bold text-white">₹0</p>
               <p className="text-xs text-gray-400">Earnings</p>
             </div>
-            <div className="text-center p-3 bg-white/5 border border-white/20 rounded-lg">
-              <p className="text-xl font-bold text-white">{studentCount}</p>
+            <div 
+              onClick={() => navigate('/students-list')}
+              className="text-center p-3 bg-white/5 border border-orange-500/30 rounded-lg cursor-pointer hover:bg-white/10 transition-all hover:scale-105"
+            >
+              <p className="text-xl font-bold text-orange-400">{studentCount}</p>
               <p className="text-xs text-gray-400">Students</p>
             </div>
           </div>

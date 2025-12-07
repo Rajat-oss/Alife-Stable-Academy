@@ -24,6 +24,7 @@ import Consultation from "./pages/Consultation";
 import Webinar from "./pages/Webinar";
 import Blogs from "./pages/Blogs";
 import Resell from "./pages/Resell";
+import StudentsList from "./pages/StudentsList";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -56,6 +57,7 @@ const App = () => (
               <Route path="/webinar" element={<Webinar />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/resell" element={<Resell />} />
+              <Route path="/students-list" element={<StudentsList />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
