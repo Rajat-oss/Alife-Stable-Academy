@@ -90,7 +90,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
               <GraduationCap className="h-5 w-5 text-white" />
             </div>
-            <span className="font-bold text-gray-800 text-lg">LearnSphere</span>
+            <span className="font-bold text-gray-800 text-lg">alife-stable-academy</span>
           </NavLink>
 
           {/* Center: Navigation Links (Desktop) */}
@@ -98,10 +98,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
             <NavLink to="/" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Home</NavLink>
             <NavLink to="/courses" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Courses</NavLink>
             <NavLink to="/books" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Books</NavLink>
-            <NavLink to="/pre-recorded" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Pre-Recorded</NavLink>
             <NavLink to="/study-material" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Study Material</NavLink>
-            <NavLink to="/consultation" className="text-muted-foreground hover:text-foreground transition-colors font-medium">1:1 Consultation</NavLink>
-            <NavLink to="/webinar" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Webinar</NavLink>
             <NavLink to="/blogs" className="text-muted-foreground hover:text-foreground transition-colors font-medium">Blogs</NavLink>
           </nav>
 
@@ -182,7 +179,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
           showMobileSidebar ? 'translate-x-0' : '-translate-x-full'
         }`}>
           <div className="p-6 lg:hidden">
-            <h2 className="text-2xl font-bold text-gray-800">LearnSphere</h2>
+            <h2 className="text-2xl font-bold text-gray-800">alife-stable-academy</h2>
           </div>
         <nav className="px-4 space-y-2 flex-1">
           {sidebarItems.map((item, i) => (
@@ -270,17 +267,8 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
             <NavLink to="/books" onClick={() => setShowRightSidebar(false)} className="w-full flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
               Books
             </NavLink>
-            <NavLink to="/pre-recorded" onClick={() => setShowRightSidebar(false)} className="w-full flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
-              Pre-Recorded
-            </NavLink>
             <NavLink to="/study-material" onClick={() => setShowRightSidebar(false)} className="w-full flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
               Study Material
-            </NavLink>
-            <NavLink to="/consultation" onClick={() => setShowRightSidebar(false)} className="w-full flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
-              1:1 Consultation
-            </NavLink>
-            <NavLink to="/webinar" onClick={() => setShowRightSidebar(false)} className="w-full flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
-              Webinar
             </NavLink>
             <NavLink to="/blogs" onClick={() => setShowRightSidebar(false)} className="w-full flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
               Blogs
