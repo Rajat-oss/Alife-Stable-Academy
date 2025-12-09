@@ -18,10 +18,7 @@ import NewPage from "./pages/NewPage";
 import NewsfeedPage from "./pages/NewsfeedPage";
 import ChatPage from "./pages/ChatPage";
 import Books from "./pages/Books";
-import PreRecorded from "./pages/PreRecorded";
 import StudyMaterial from "./pages/StudyMaterial";
-import Consultation from "./pages/Consultation";
-import Webinar from "./pages/Webinar";
 import Blogs from "./pages/Blogs";
 import Resell from "./pages/Resell";
 import StudentsList from "./pages/StudentsList";
@@ -52,10 +49,7 @@ const App = () => (
               <Route path="/social/newsfeed" element={<NewsfeedPage />} />
               <Route path="/social/chat" element={<ChatPage />} />
               <Route path="/books" element={<Books />} />
-              <Route path="/pre-recorded" element={<PreRecorded />} />
               <Route path="/study-material" element={<StudyMaterial />} />
-              <Route path="/consultation" element={<Consultation />} />
-              <Route path="/webinar" element={<Webinar />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/resell" element={<Resell />} />
  main

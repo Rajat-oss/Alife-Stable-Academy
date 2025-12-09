@@ -43,10 +43,7 @@ const Navbar = () => {
     { to: "/", label: "Home" },
     { to: "/courses", label: "Courses" },
     { to: "/books", label: "Books" },
-    { to: "/pre-recorded", label: "Pre-Recorded" },
     { to: "/study-material", label: "Study Material" },
-    { to: "/consultation", label: "1:1 Consultation" },
-    { to: "/webinar", label: "Webinar" },
     { to: "/blogs", label: "Blogs" },
   ];
 
@@ -64,7 +61,7 @@ const Navbar = () => {
               <GraduationCap className="h-6 w-6 text-white" />
             </div>
             <span className="font-display text-2xl font-black text-[#0B1A2A]">
-              Learn<span className="text-gradient">Sphere</span>
+              alife-stable-academy
             </span>
           </NavLink>
 
